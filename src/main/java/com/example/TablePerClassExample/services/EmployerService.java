@@ -27,6 +27,10 @@ public class EmployerService {
 		 *Só lembresse de tirar o DiscriminatorValue,  pois não faz sentido porque não é possivel instanciar.
 		 */
 		
+		/*
+		 * Resuma dessa strategy: Cria uma unica tabela com todos os atributos das super classes e das subclasses.
+		 */
+		
 		Employer employer = new SalariedEmployer();
 		
 		employer.setEmpNo(empNo);
