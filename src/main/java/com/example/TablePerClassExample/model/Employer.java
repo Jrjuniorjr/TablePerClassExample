@@ -11,7 +11,8 @@ import javax.persistence.InheritanceType;
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="type", discriminatorType=DiscriminatorType.STRING)
-public abstract class Employer {
+@DiscriminatorValue(value="employer")
+public class Employer {
 	
 	@Id
 	private int empNo;

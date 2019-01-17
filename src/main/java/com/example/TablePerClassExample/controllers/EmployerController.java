@@ -2,6 +2,8 @@ package com.example.TablePerClassExample.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,4 +26,8 @@ public class EmployerController {
 		return employerService.saveEmployer(empNo, eName, annualSalary); 
 	}
 
+	@GetMapping("/findByEmpNo/{empNo}")
+	public ResponseEntity<?> findEmployerByEmpNo(@PathVariable("empNo") int empNo){
+		return employerService.findByEmpNo(empNo);
+	}
 }

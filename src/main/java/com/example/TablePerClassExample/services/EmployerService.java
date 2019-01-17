@@ -38,4 +38,17 @@ public class EmployerService {
 		return ResponseEntity.ok("Empregado cadastrado com sucesso!");
 		
 	}
+	
+	/*
+	 * Observação 3 - Traz tambem o objeto do tipo SalariedEmployer, mesmo a referência sendo Employer.
+	 */
+	
+	/*
+	 * Observação 4 - É como se lidasse com o objeto inteiro, tanto pra salvar, como para consultar. 
+	 */
+	public ResponseEntity<Employer> findByEmpNo(int empNo) {
+		
+		Employer employer = iEmployerDAO.findByEmpNo(empNo);
+		return ResponseEntity.ok(employer);
+	}
 }
