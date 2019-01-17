@@ -23,7 +23,7 @@ public class EmployerService {
 		 */
 		
 		/*
-		 *Observação 2 - Mesmo se a super classe(nesse caso, employer) for a observação 1 também funciona.
+		 *Observação 2 - Mesmo se a super classe(nesse caso, employer) for abstrata, a observação 1 também funciona.
 		 *Só lembresse de tirar o DiscriminatorValue,  pois não faz sentido porque não é possivel instanciar.
 		 */
 		
